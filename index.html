@@ -34,9 +34,18 @@
                         <span class="glyphicon glyphicon-plus"></span>
                         Create a bookmark
                       </button>
-                      <div ng-if="isCreating">
-                        <button class="btn btn-default btn-lg pull-right" ng-click="cancelCreating()">cancel</button>
-                      </div>
+                      <form class="create-form" ng-show="isCreating" role="form" ng-submit="createBookmark(newBookmark)" novalidate>
+                        <div class="form-group">
+                          <label for="newBookmarkTitle">Bookmark title</label>
+                          <input type="text" class="form-control" id="newBookmarkTitle" ng-model="newBookmark.title">
+                        </div>
+                        <div class="form-group">
+                          <label for="newBookmarkUrl">Bookmark URL</label>
+                          <input type="text" class="form-control" id="newBookmarkURL" ng-model="newBookmark.url">
+                        </div>
+                        <button type="submit" class="btn btn-info btn-lg">Create</button>
+                        <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelCreating()">Cancel</button>
+                      </form>
                     </div>
                     <!--Editing -->
                     <div ng-if="shouldShowEditing();">
@@ -44,7 +53,7 @@
                       <button class="btn btn-default btn-lg pull-right" ng-click="cancelEditing()">cancel</button>
                     </div>
                 </div>
-            </div>
+            </<div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
