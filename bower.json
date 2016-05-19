@@ -1,0 +1,19 @@
+{
+  "name": "eggly",
+  "homepage": "https://github.com/jrgonzalezrios/eggly",
+  "authors": [
+    "jrgonzalezrios <jrgonzalezrios@gmail.com>"
+  ],
+  "description": "Angular init",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
